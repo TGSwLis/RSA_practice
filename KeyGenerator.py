@@ -65,7 +65,7 @@ def fastMod(base, exp, mod):
     return result
 
 
-# Using RSA algorithm to encrypt the text
+# Using RSA algorithm to encrypt the integer
 # 1. Randomly pick two appropriate prime number
 # Prime numbers need to be big enough
 prime1 = 712910974150897
@@ -90,3 +90,13 @@ if d < 0:
 # print("d:", d)
 
 # print("Done!")
+
+# 5. Testing
+originNum = 7355808
+print("Original Number:", originNum)
+
+encryptNum = fastMod(originNum, e, n)
+print("Encrypted Number:", encryptNum)
+
+decrpytNum = fastMod(encryptNum, d, n)
+print("Decrpyted Number:", decrpytNum)
