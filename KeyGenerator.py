@@ -1,5 +1,5 @@
-# prime1, prime2 should be random number
-# e should be random number as well
+# prime1, prime2 should be random numbers
+# e should be a random number as well
 import random
 import math
 
@@ -65,68 +65,11 @@ def fastMod(base, exp, mod):
     return result
 
 
-# def phi(n):
-#     count = 0
-#     for k in range(1, n + 1):
-#         if gcd(k, n) == 1:
-#             count += 1
-#     return count
-
-
-# # AKS primality test (TODO)
-# # Give up = =
-# def isPrime(n):
-#     # part 1
-#     for b in range(2, int(math.log2(n) + 1)):
-#         a = n ** (1 / b)
-#         if a == math.floor(a):
-#             return False
-
-#     # part 2
-#     nextR = True
-#     r = 1
-#     while nextR == True:
-#         r = r + 1
-#         nextR = False
-#         k = 1
-#         while k <= math.log2(n) and not nextR:
-#             nextR = fastMod(n, k, r) == 1 or fastMod(n, k, r) == 0
-#             k = k + 1
-
-#     # part 3
-#     for a in range(2, r + 1):
-#         if 1 < gcd(a, n) and gcd(a, n) < n:
-#             return False
-
-#     # part 4
-#     if n < 5690034:
-#         if n <= r:
-#             return True
-#         else:
-#             return False
-
-#     # part 5
-#     for a in range(1, math.floor(phi(r) * math.log2(n)) + 1):
-#         if False:
-#             pass
-
-#     return True
-
-
 # Using RSA algorithm to encrypt the text
 # 1. Randomly pick two appropriate prime number
-# Prime numbers need to be big enough, and the difference between them cannot be too huge
-# e.g. 757, 787, 2207, 99194853094755497, 3314192745739
+# Prime numbers need to be big enough
 prime1 = 712910974150897
 prime2 = 863113070614841
-# primeFlag = True
-# gapFlag = False
-
-# while not primeFlag or gapFlag:
-#     prime1 = random.randint(2, 1000000)
-#     prime2 = random.randint(2, 1000000)
-#     primeFlag = isPrime(prime1) and isPrime(prime2)
-#     gapFlag = (prime1 / prime2 > 1000) or (prime2 / prime1 > 1000)
 
 # 2. Compute n and phi
 # note: n should be greater than the message to be encrypted
