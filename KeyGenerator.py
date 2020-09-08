@@ -86,8 +86,6 @@ if d < 0:
     d = d + phi
 # print("d:", d)
 
-# print("Done!")
-
 # 5. Testing
 originNum = 7355808
 print("Original Number:", originNum)
