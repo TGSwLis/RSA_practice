@@ -41,7 +41,7 @@ def fastMod(base, exp, mod):
     elif exp == 1:
         return base % mod
 
-    # Convert the exponent part into base-2
+    # Convert the exponent part into base-2 number
     baseTwoExp = []
     while exp > 0:
         baseTwoExp.append(exp % 2)
@@ -51,16 +51,16 @@ def fastMod(base, exp, mod):
     result = base % mod
     while index >= 0:
         if index == len(baseTwoExp) - 1:
-            index = index - 1
+            index -= 1
             continue
         else:
             if baseTwoExp[index] == 0:
                 result = (result * result) % mod
-                index = index - 1
+                index -= 1
             else:
                 result = (result * result) % mod
                 result = (result * (base % mod)) % mod
-                index = index - 1
+                index -= 1
 
     return result
 
