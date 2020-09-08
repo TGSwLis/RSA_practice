@@ -3,7 +3,7 @@
 import random
 import math
 
-
+# Implement Euclidean algorithm
 def gcd(a, b):
 
     if a < b:
@@ -16,7 +16,7 @@ def gcd(a, b):
 
     return a
 
-
+# Implement Extended Euclidean algorithm
 def egcd(a, b):
 
     s0, s1 = 1, 0
@@ -33,7 +33,7 @@ def egcd(a, b):
 
     return s0, t0, a
 
-
+# For big number modulo operation
 def fastMod(base, exp, mod):
     # We don't consider the cases that exp < 0 or exp is fraction
     if exp == 0:
@@ -87,16 +87,6 @@ x, y, a = egcd(e, phi)
 d = x
 if d < 0:
     d = d + phi
-
 # print("d:", d)
 
-publicFile = open("PublicKey.txt", "w+")
-publicFile.write("n: %d" % n)
-publicFile.write("\ne: %d" % e)
-publicFile.close()
-privateFile = open("PrivateKey.txt", "w+")
-privateFile.write("n: %d" % n)
-privateFile.write("\nd: %d" % d)
-privateFile.close()
-
-print("Done!")
+# print("Done!")
