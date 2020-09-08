@@ -1,6 +1,3 @@
-# prime1, prime2 should be random numbers
-# e should be a random number as well
-import random
 import math
 
 # Implement Euclidean algorithm
